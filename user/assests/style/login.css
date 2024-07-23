@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        .satisfy-regular {
+            font-family: "Satisfy", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: blue;
+            font-size: 32px; /* Increased font size */
+        }
+      body {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+         background: white;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .logo-container {
+         text-align: center;
+         margin-bottom: 20px;
+      }
+      
+      .logo-container a {
+         font-size: 32px; /* Increased font size */
+         color: #0a0a23;
+         text-decoration: none;
+      }
+
+      .form-container {
+         padding: 25px;
+         background: white; 
+         border-radius: 7px;
+         max-width: 400px;
+         width: 100%;
+      }
+
+      .form-container h2 {
+         color: #0a0a23; 
+         font-size: 24px; /* Reduced heading size */
+         text-align: center;
+         margin-bottom: 30px;
+      }
+
+      .form-container .form-group label {
+         color: #0a0a23;
+         font-size: 15px;
+         margin-bottom: 7px;
+      }
+
+      .form-container .form-group input,
+      .form-container .form-group select {
+         color: #0a0a23;
+      }
+
+      .form-container .submit-btn input {
+         color: white;
+         border: none;
+         font-size: 16px;
+         padding: 13px 0;
+         border-radius: 5px;
+         background: #0a0a23;
+         transition: 0.2s ease;
+      }
+
+      .form-container .submit-btn input:hover {
+         background: #212529;
+      }
+
+      .error-text {
+         color: red;
+         font-size: 14px;
+         margin-top: 5px;
+      }
+
+      .message {
+         background: #0a0a23;
+         color: red;
+         padding: 10px 10px;
+         margin-bottom: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         /* height: 20px; */
+      }
+
+      .message:hover {
+         opacity: 0.8;
+      }
