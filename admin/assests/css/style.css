@@ -45,9 +45,9 @@ body {
     min-width: 70px;
     z-index: 1000;
     transition: all .25s ease-in-out;
-    background-color: #0e2238;
     display: flex;
     flex-direction: column;
+     background-color: #0e2238;
 }
 
 #sidebar.expand {
@@ -120,6 +120,7 @@ a.sidebar-link {
 a.sidebar-link:hover {
     background-color: rgba(255, 255, 255, .075);
     border-left: 3px solid #3b7ddd;
+    text-decoration: none;
 }
 
 .sidebar-item {
@@ -141,6 +142,7 @@ a.sidebar-link:hover {
     max-height: 15em;
     width: 100%;
     opacity: 1;
+    text-decoration: none;
 }
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
@@ -163,20 +165,16 @@ a.sidebar-link:hover {
 
 .navbar {
     background-color: #f5f5f5;
+    position: fixed;
 }
 
 .navbar-expand .navbar-collapse {
     min-width: 200px;
 }
 
-
-/* .avatar {
-    height: 40px;
-    width: 40px;
-} */
-
 .card{
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+    background-color: #f3f4f6;
     transition: .4s;
     cursor: pointer;
     color: black;
@@ -191,18 +189,7 @@ a.sidebar-link:hover {
     transform: translate(-10.5px);
 }
 
-.table>thead tr{
-    color: #FFF;
-    text-align:left;
-}
-tr.highlight th{
-    background-color: #293b5f;
-    color: #FFF;
-}
 
-.content{
-    flex:1 1 auto ;
-}
 .footer{
     /* background-color: #293b5f; */
     padding:1rem .875rem;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Verification Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .verification-form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 26px;
+            text-align: center;
+        }
+        .form-group label {
+            font-weight: 600;
+            color: #0a0909;
+        }
+        .form-check-label {
+            margin-left: 5px;
+        }
+        .btn-primary {
+            width: 100%;
+            background-color: #007bff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        #reasonField {
+            display: none;
+            margin-top: 10px;
+        }
+        .form-text {
+            font-size: 14px;
+            color: #666;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        .required-label::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+    <script>
+        function toggleReasonField() {
+            const criminalRecordYes = document.getElementById('criminalRecordYes');
+            const reasonField = document.getElementById('reasonField');
+            reasonField.style.display = criminalRecordYes.checked ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container verification-form-container">
+        <h2 class="text-center">Donor Verification Form</h2>
+        <form action="process_verification.php" method="post" enctype="multipart/form-data">
+            <!-- Document Upload -->
+            <div class="form-group">
+                <label for="ageCertificate">Upload Age Certificate/Citizenship Document</label>
+                <input type="file" class="form-control-file" id="ageCertificate" name="age_certificate">
+                <small class="form-text">Accepted formats: .jpg, .jpeg, .png, .pdf</small>
+            </div>
+            <!-- Background Check: Criminal Record -->
+            <div class="form-group">
+                <label class="required-label">Do you have any criminal record in your history?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criminal_record" id="criminalRecordYes" value="Yes" onclick="toggleReasonField();" required>
+                    <label class="form-check-label" for="criminalRecordYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criminal_record" id="criminalRecordNo" value="No" onclick="toggleReasonField();" required>
+                    <label class="form-check-label" for="criminalRecordNo">No</label>
+                </div>
+            </div>
+
+            <!-- Reason for Criminal Record (Conditional) -->
+            <div class="form-group" id="reasonField">
+                <label for="criminalReason">If yes, what was the reason?</label>
+                <textarea class="form-control" id="criminalReason" name="criminal_reason" rows="3"></textarea>
+            </div>
+
+            <!-- Last Blood Donation Date (Optional) -->
+            <div class="form-group">
+                <label for="lastDonationDate">Last Blood Donation Date (Optional)</label>
+                <input type="date" class="form-control" id="lastDonationDate" name="last_donation_date">
+            </div>
+
+            <!-- Blood Donation Count (Optional) -->
+            <div class="form-group">
+                <label for="donationCount">Number of Blood Donations (Optional)</label>
+                <input type="number" class="form-control" id="donationCount" name="donation_count" min="0">
+            </div>
+
+            <!-- Consent Form -->
+            <div class="form-group">
+                <label class="required-label">Consent Agreement:</label>
+                <p class="form-text">
+                    I hereby understand and agree to the terms and conditions of the blood donation process. 
+                    I consent to the verification of my provided information and documents, and I acknowledge 
+                    that any false information may result in the rejection of my request to donate blood.
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="consent_agreement" id="consentAgreementYes" value="Yes" required>
+                    <label class="form-check-label" for="consentAgreementYes">I agree</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="consent_agreement" id="consentAgreementNo" value="No" required>
+                    <label class="form-check-label" for="consentAgreementNo">I do not agree</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">
+                Submit Verification
+            </button>
+        </form>
+    </div>
+</body>
+</html>

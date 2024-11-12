@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    border: 2px solid white;
+}
+.container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.profile-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.profile-card .labels {
+    font-weight: bold;
+}
+.profile-button {
+    border: none;
+    color: white;
+}
+.profile-button:hover {
+    background-color: #990000;
+}
+.bg {
+    background-color: #cc0000;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-transform: uppercase;
+    margin-top: 20px;
+}

@@ -12,6 +12,7 @@
         }
         .content {
             color: #343a40;
+            
            
         }
         .table-responsive {
@@ -42,7 +43,7 @@
                             <div class="card-body py-4">
                                 <h5 class="mb-2 fw">
                                     <i class="fas fa-tint icon-red"></i>  <small>Total blood pins collected
-    </small></h5>
+                                </small></h5>
                                 <p class="mb-2 fw-bold">
                                     200
                                 </p>
@@ -90,63 +91,14 @@
         </div>
     </main>
 </div>
-<div id="dr" class="content px-3 py-4">
-    <h3><small>New Donors request </small></h3>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>User ID</th>
-                    <th>fullname</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>JohnDoe</td>
-                    <td>johndoe@example.com</td>
-                    <td>User</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>JaneDoe</td>
-                    <td>janedoe@example.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>SamSmith</td>
-                    <td>samsmith@example.com</td>
-                    <td>User</td>
-                    <td>
-                        <button class="btn btn-sm btn-primary">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-            <thead class="thead-dark">
-                <tr>
-                    <th>User ID</th>
-                    <th>fullname</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
+
+<?php
+include'view_approved_dr.php';
+?>
+
+<?php
+include'view_seekers.php';
+?>
 
 <!-- Font Awesome Script -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

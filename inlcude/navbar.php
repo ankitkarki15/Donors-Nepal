@@ -35,11 +35,11 @@
                     <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-plus"></i> Add Request</a>
+                    <a class="nav-link" href="seeker/makebloodreq.php"><i class="fas fa-plus"></i> Add Request</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="../user/register.php"><i class="fas fa-user-plus"></i> Become Donor</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-tasks"></i> Blood Requests</a>
                 </li>

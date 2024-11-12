@@ -1,6 +1,13 @@
-<!DOCTYPE html>
-<html>
+<?php
+session_start(); // Start the session at the very top
 
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+    header("Location: /adminlogin.php"); // Redirect if not logged in
+    exit();
+}
+?><!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +47,7 @@
                     </a>
                     <ul id="request" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="?page=donor_requests" class="sidebar-link">Pending Donor Requests</a>
+                            <a href="?page=viewdonor_requests" class="sidebar-link">Pending Donor Requests</a>
                         </li>
                         <li class="sidebar-item">
                             <a href="?page=view_approved_dr"  class="sidebar-link">Approved Blood Requests</a>
@@ -56,10 +63,10 @@
                     </a>
                     <ul id="donors" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="?page=view_donors" class="sidebar-link">View Donors List</a>
+                            <a href="?page=view_donors" class="sidebar-link">View Donors</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="?page=add_donors"  class="sidebar-link">Add Donors</a>
+                            <a href="?page=view_seekers"  class="sidebar-link">View Seekers</a>
                         </li>
                     </ul>
                 </li>
