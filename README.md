@@ -18,7 +18,7 @@ Backend: PHP, MySQL
 Algorithm: Haversine Formula
 
 
-This system plays a vital role in improving public health by reducing blood shortages and promoting c
+This system plays a vital role in improving public health by reducing blood shortages and promoting community involvement in donations.
 
 
 ..................................................
