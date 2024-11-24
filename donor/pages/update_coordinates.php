@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 $conn = mysqli_connect('localhost', 'root', 'ankit', 'dndb') or die('Connection failed');
 
 // Google API Key
-$apiKey = 'AIzaSyBDjZB_9nLo8OREihv5Xj3HydH9fd9lmC4';
+$apiKey = '';
 // $batchSize = 10;
 
 // Function to get and store coordinates for a specific local level
